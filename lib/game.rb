@@ -1,12 +1,16 @@
 class Game
+
+    attr_reader :rolls
+
     def initialize
+        @rolls = []
     end
 
     def roll(pins)
-        return pins
+        @rolls << pins
     end
 
     def score
-        0
+        @rolls.sum
     end
 end
